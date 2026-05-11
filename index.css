@@ -168,11 +168,13 @@ body{
 @media (hover: hover) and (pointer: fine) {
   .card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    opacity: 1;
   }
 }
 @media (hover: none) and (pointer: coarse) {
   .card-toggle:checked + .card .flip-card-inner {
     transform: rotateY(180deg);
+    opacity: 1;
   }
 }
 .flip-card-front,
@@ -323,7 +325,7 @@ body{
 
     /* CSS here only applies on devices with width <= 500px */
     .cards-container {
-        flex-wrap: nowrap;
+        flex-wrap:wrap;
         /* stack cards */
         justify-content: center;
     }
@@ -340,9 +342,9 @@ body{
         height: 100%;
     }
     .techskillcontainer {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        height: fit-content;
+        height: 100%;
     }
     .card-pair {
         width: 90%;
