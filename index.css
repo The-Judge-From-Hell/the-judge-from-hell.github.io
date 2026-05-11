@@ -270,15 +270,12 @@ body{
     transition-duration: 0.5s;
 }
 .sub-card{
-    height:0;
+max-height: 0;
     width: 220px;
     pointer-events: none;
     top: 25px;
     overflow: hidden;
     visibility: hidden;
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
     transition: height 0.5s ease, visibility 0s ease 0.5s;
     transform: translateY(-45%);
     box-shadow: 0px 5px 5px 3px #0a0a0f;
@@ -295,7 +292,7 @@ body{
     color: white;
 }
 .main-card:hover ~ .sub-card{
-    height: 270px;
+    max-height: 500px;
     visibility: visible;
     transition: height 0.5s ease, visibility 0s ease 0s;
 }
@@ -325,8 +322,7 @@ body{
 
     /* CSS here only applies on devices with width <= 500px */
     .cards-container {
-        flex-wrap:wrap;
-        /* stack cards */
+        overflow-x: auto;
         justify-content: center;
         flex-direction: column;
     }
@@ -342,20 +338,38 @@ body{
         width: 100%;
         height: 100%;
     }
+    .techside{
+        height: max-content;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .techskillcontainer {
         flex-direction: column !important;
         align-items: center;
         height: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        gap: 0px;
     }
     .card-pair {
         width: 90%;
         margin-bottom: 15px;
     }
-    .main-card,.sub-card {
+    .main-card, .sub-card {
         width: 100%;
         position: relative;
-        top: auto;
     }
+    .main-card:hover{
+        margin-top: 30px;
+    }
+    .sub-card{
+        transform: none;
+        margin-bottom: 30px;
+    }
+    
     .sect-title {
         font-size: 24px;
     }
@@ -379,5 +393,10 @@ body{
         gap: 10px;
         padding: 15px;
         width: 100%;
+        border-radius: 20px;
+        text-align: center;
+    }
+    .ican, .ican-c, .ican-swift{
+        margin-top: 0px;
     }
 }
