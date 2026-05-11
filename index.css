@@ -270,7 +270,7 @@ body{
     transition-duration: 0.5s;
 }
 .sub-card{
-max-height: 0;
+    height:0;
     width: 220px;
     pointer-events: none;
     top: 25px;
@@ -292,7 +292,7 @@ max-height: 0;
     color: white;
 }
 .main-card:hover ~ .sub-card{
-    max-height: 500px;
+    height: 270px;
     visibility: visible;
     transition: height 0.5s ease, visibility 0s ease 0s;
 }
@@ -358,16 +358,14 @@ max-height: 0;
         width: 90%;
         margin-bottom: 15px;
     }
-    .main-card, .sub-card {
+    .main-card,.sub-card {
         width: 100%;
         position: relative;
-    }
-    .main-card:hover{
-        margin-top: 30px;
     }
     .sub-card{
         transform: none;
         margin-bottom: 30px;
+        padding-bottom: 20px;
     }
     
     .sect-title {
@@ -383,7 +381,11 @@ max-height: 0;
         font-size: 16px;
         padding: 10px;
     }
-
+    .main-card:hover~.sub-card {
+        height: fit-content;
+        visibility: visible;
+        transition: height 0.5s ease, visibility 0s ease 0s;
+    }
     .skill-name {
         font-size: 16px;
     }
