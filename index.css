@@ -356,4 +356,27 @@ body{
         overflow: visible;
         visibility: visible;
     }
+        .sect-title {
+            font-size: 24px;
+        }
+    
+        .flip-card-front {
+            font-size: 20px;
+            padding: 10px;
+        }
+    
+        .flip-card-back {
+            font-size: 16px;
+            padding: 10px;
+        }
+    
+        .skill-name {
+            font-size: 16px;
+        }
+    
+        .title-bar {
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+        }
 }
