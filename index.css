@@ -323,7 +323,7 @@ body{
 
     /* CSS here only applies on devices with width <= 500px */
     .cards-container {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         /* stack cards */
         justify-content: center;
     }
@@ -340,7 +340,7 @@ body{
         height: 100%;
     }
     .techskillcontainer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         height: fit-content;
     }
@@ -352,7 +352,6 @@ body{
         width: 100%;
         position: relative;
         top: auto;
-        transform: none;
     }
     .sect-title {
         font-size: 24px;
