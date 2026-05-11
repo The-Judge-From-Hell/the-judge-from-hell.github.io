@@ -321,7 +321,7 @@ body{
 }
 @media (max-width: 500px) {
 
-    /* CSS here only applies on devices with width <= 768px */
+    /* CSS here only applies on devices with width <= 500px */
     .cards-container {
         flex-wrap: wrap;
         /* stack cards */
@@ -342,7 +342,7 @@ body{
     .techskillcontainer {
         flex-direction: column;
         align-items: center;
-        height: auto;
+        height: fit-content;
     }
     .card-pair {
         width: 90%;
@@ -353,30 +353,28 @@ body{
         position: relative;
         top: auto;
         transform: none;
-        overflow: visible;
-        visibility: visible;
     }
-        .sect-title {
-            font-size: 24px;
-        }
-    
-        .flip-card-front {
-            font-size: 20px;
-            padding: 10px;
-        }
-    
-        .flip-card-back {
-            font-size: 16px;
-            padding: 10px;
-        }
-    
-        .skill-name {
-            font-size: 16px;
-        }
-    
-        .title-bar {
-            flex-direction: column;
-            gap: 10px;
-            padding: 15px;
-        }
+    .sect-title {
+        font-size: 24px;
+    }
+
+    .flip-card-front {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .flip-card-back {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .skill-name {
+        font-size: 16px;
+    }
+
+    .title-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
 }
