@@ -216,7 +216,7 @@ body{
     overflow-y: auto;
     transform: rotateY(180deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 
     /* CSS here only applies on devices with width <= 768px */
     .cards-container {
