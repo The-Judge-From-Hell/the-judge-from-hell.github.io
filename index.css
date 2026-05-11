@@ -216,7 +216,23 @@ body{
     overflow-y: auto;
     transform: rotateY(180deg);
 }
+@media (max-width: 768px) {
 
+    /* CSS here only applies on devices with width <= 768px */
+    .cards-container {
+        flex-wrap: wrap;
+        /* stack cards */
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        /* make cards fit screen */
+        max-width: 420px;
+        /* keep desktop max */
+        margin: 10px auto;
+    }
+}
 .techskillcontainer {
     border-radius: 25px;
     padding-right: 20px;
