@@ -9,14 +9,15 @@
 <body>
     <div class="navig">
     <div class="title-bar">
-        <div class="elements">The Judge From Hell</div>
-        <div class="elements">Projects</div>
-        <div class="elements">Contact</div>
-        <div class="elements">GitHub</div>
+        <div class="elements" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">The Judge From Hell</div>
+        <div class="elements" onclick="document.getElementById('programming').scrollIntoView({behavior:'smooth'})">Programming</div>
+        <div class="elements" onclick="document.getElementById('creatives').scrollIntoView({behavior:'smooth'})">Creatives</div>
+        <div class="elements" onclick="document.getElementById('tinkering').scrollIntoView({behavior:'smooth'})">Tinkering</div>
+        <div class="elements" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</div>
     </div>
     </div>
     
-    <div class="primary">
+    <div class="primary" id="about">
         <div class="sect-title">About</div>
         <div class="my-intro">
             <div class="cards-container">
@@ -90,16 +91,46 @@
         </div>
     </div>
 
-    <div class="techside">
+    <div class="techside" id="programming">
         <div class="sect-title-light">My Tech Stack</div>
         <div class="contain">
-            <div class="cardsx"></div>
-            <div class="cardsx"></div>
-            <div class="cardsx"></div>
+            <div class="cardsx">
+                <div class="skill-name">PYTHON</div>
+                <div class="skill-set">
+                    Coding since 14 y.o. <br><br>
+                    Can write and debug programs. <br><br>
+                    Can Automate repetitive tasks. <br> <br>
+                    Built simple web backends and simple software.
+                </div>
+            </div>
+            <div class="cardsx">
+                <div class="skill-name">HTML CSS</div>
+                <div class="skill-set">
+                    Building sites since a year <br><br>
+                    Can build simple websites.<br><br>
+                    Built a private marriage album.<br> <br>
+                    Built a recommendation system for K-Dramas.
+                </div>
+            </div>
+            <div class="cardsx">
+                <div class="skill-name">SWIFT</div>
+                <div class="skill-set">
+                    Still Beginner here..<br><br>
+                    Learning from official guide.<br><br>
+                    Can write simple programs.<br> <br>
+                </div>
+            </div>
+            <div class="cardsx">
+                <div class="skill-name">C LANGUAGE</div>
+                <div class="skill-set">
+                    Learnt as a kid.<br><br>
+                    Can understand and write programs.<br><br>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="design">
+    <div class="design" id="creatives">
         <div class="sect-title">Creative Side</div>
         <div class="talent-container">
             <div class="talent">
@@ -213,7 +244,7 @@
         </div>
     </div>
 
-    <div class="tinkerer">
+    <div class="tinkerer" id="tinkering">
         <div class="sect-title-light">Tinkering Hands</div>
     </div>
 </body>
