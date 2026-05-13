@@ -220,17 +220,16 @@ body{
 }
 .techskillcontainer {
     border-radius: 25px;
-    padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 30px;
     margin-top: 20px;
+    margin-right: 20px;
     display: flex;
     align-items: flex-start;
     background: linear-gradient(135deg, #7c3aed60, #bb7ff360);
     height: 300px;
     gap: 15px;
     align-items: center;
-    width: fit-content;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
     animation-delay: 1.0s;
@@ -250,7 +249,7 @@ body{
     padding-right: 20px;
     transition-duration: 0.5s;
     position: relative;
-    width: 220px;   
+    width: 200px;   
     height: 50px;
     box-sizing: border-box;
     box-shadow: 0px 5px 5px 3px #0a0a0f;
@@ -271,7 +270,7 @@ body{
 }
 .sub-card{
     height:0;
-    width: 220px;
+    width: 200px;
     pointer-events: none;
     top: 25px;
     overflow: hidden;
@@ -287,6 +286,8 @@ body{
 .main-card:hover {
     background-color: #0a0a0f;
     box-shadow: 0px 0px 5px 1px #0a0a0f;
+    transform: scale(1.05);
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
 .main-card:hover .skill-name{
     color: white;
@@ -299,14 +300,14 @@ body{
 .experience, .ican, .ican-swift, .ican-c{
     padding-left: 5px;
     padding-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: 'Space Grotesk', sans-serif;
 }
 .ican{
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .ican-swift{
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .ican-c{
     margin-top: 65px;
@@ -411,19 +412,76 @@ body{
     margin-top: 30px;
     margin-right: 30px;
 }
-.talent{
-    border-style: solid;
-    border-width: 1px;
-    border-color: red;
+.talent {
+    border: none;
+    border-radius: 20px;
     width: 23%;
-    height: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 3px 1px #fff9;
+    transition: background-color 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    padding-bottom: 20px;
 }
-
+.soft-name {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 10px;
+    font-size: 26px;
+}
+.talent-title{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+}
+.brush{
+    margin-top: 20px;
+}
+/* Content initially hidden */
+.talent .brush,
+.talent .soft-name,
+.talent .soft-desc,
+.talent .talent-title {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.soft-desc{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 300px;
+    padding-right: 10px;
+}
+/* On hover: card opaque + content visible */
+.talent:hover {
+    background-color: rgba(255, 255, 255, 1);
+    /* fully opaque */
+    transform: scale(1.05);
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+.talent:hover .brush,
+.talent:hover .soft-name,
+.talent:hover .soft-desc,
+.talent:hover .talent-title {
+    opacity: 1;
+}
 @media (max-width: 500px){
     .talent-container{
         flex-direction: column;
+        margin-left: 0px;
     }
     .talent{
         width: 100%;
+    }
+    .design{
+        height: 100%;
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+    .talent{
+        height: 400px;
     }
 }
