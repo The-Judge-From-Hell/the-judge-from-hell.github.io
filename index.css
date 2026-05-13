@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono&display=swap');
+@font-face {
+    font-family: "SF Display";
+    font-weight: 900;
+    src: url("https://sf.abarba.me/SF-UI-Display-Black.otf");
+}
 :root{
     --bg: #0a0a0f;
     --plats: #13131a;
@@ -249,6 +254,8 @@ body{
     .techside{
         padding-left: 20px;
         padding-right: 20px;
+        height: max-content;
+        margin-bottom: 30px;
     }
     
     .sect-title {
@@ -343,6 +350,7 @@ body{
     .talent-container{
         flex-direction: column;
         margin-left: 0px;
+
     }
     .talent{
         width: 100%;
@@ -356,12 +364,7 @@ body{
         height: 400px;
     }
 }
-.tinkerer {
-    background-color: #fff;
-    padding-left: 30px;
-    padding-top: 30px;
-    height: 70vh;
-}
+
 .cardsx {
     width: 30%;
     height: 90%;
@@ -420,5 +423,60 @@ body{
     }
     .cardsx{
         width: 100%;
+        height: 300px;
+    }
+}
+.tinkerer {
+    background-color: #fff;
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 90vh;
+}
+.tinkering-cont{
+    display: flex;
+    margin-top: 30px;
+    margin-right: 30px;
+    height: 80%;
+    gap: 25px;
+    justify-content: center;
+}
+.hackintosh, .linux{
+    width: 48%;
+    border: 1px solid blue;
+    border-radius: 20px;
+    transition: transform 0.5s cubic-bezier(1, 0.04, 0, 1.02);
+}
+.hackintosh:hover, .linux:hover{
+    transform: scale(0.9);
+}
+.hackintosh{
+    background-color: #aaaaaa4d;
+}
+.menubar{
+    width: 100%;
+    height: 8%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    background: rgba(57, 57, 57, 0.24);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    align-items: center;
+    padding-left: 10px;
+    gap: 15px;
+}
+.menubar-items{
+    font-family: "SF Display", system-ui;
+    font-size: 14px;
+}
+
+@media (max-width: 500px){
+    .tinkering-cont{
+        flex-direction: column;
+    }
+    .hackintosh{
+        width: 90%;
+        height: 100%;
+        overflow: hidden;
     }
 }
