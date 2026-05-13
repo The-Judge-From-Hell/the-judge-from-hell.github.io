@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono&display=swap');
 :root{
     --bg: #0a0a0f;
     --plats: #13131a;
@@ -81,7 +82,7 @@ body{
     padding-right: 50px;
     background-color: #0a0a0f09;
     backdrop-filter: blur(10px);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Mono',monospace;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
     animation-delay: 0.5s;
@@ -218,100 +219,6 @@ body{
     overflow-y: auto;
     transform: rotateY(180deg);
 }
-.techskillcontainer {
-    border-radius: 25px;
-    padding-left: 20px;
-    padding-bottom: 30px;
-    margin-top: 20px;
-    margin-right: 20px;
-    display: flex;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #7c3aed60, #bb7ff360);
-    height: 300px;
-    gap: 15px;
-    align-items: center;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 1.0s;
-}
-.card-pair {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-
-}
-.main-card{
-    display: flex;
-    flex-direction: row;
-    background-color: #fff;
-    border-radius: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    transition-duration: 0.5s;
-    position: relative;
-    width: 200px;   
-    height: 50px;
-    box-sizing: border-box;
-    box-shadow: 0px 5px 5px 3px #0a0a0f;
-    z-index: 100;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 1.5s;
-}
-.skill-name{
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
-    font-family:'Space Grotesk',sans-serif;
-    align-content: center;
-    margin-left: 10px;
-    font-size: 18px;
-    transition-duration: 0.5s;
-}
-.sub-card{
-    height:0;
-    width: 200px;
-    pointer-events: none;
-    top: 25px;
-    overflow: hidden;
-    visibility: hidden;
-    transition: height 0.5s ease, visibility 0s ease 0.5s;
-    transform: translateY(-45%);
-    box-shadow: 0px 5px 5px 3px #0a0a0f;
-    backdrop-filter: blur(10px) saturate(180%);
-    position: absolute;
-    background-color: #ffffff99;
-    border-radius: 15px;
-}
-.main-card:hover {
-    background-color: #0a0a0f;
-    box-shadow: 0px 0px 5px 1px #0a0a0f;
-    transform: scale(1.05);
-    transition: transform 0.5s ease, background-color 0.5s ease;
-}
-.main-card:hover .skill-name{
-    color: white;
-}
-.main-card:hover ~ .sub-card{
-    height: 270px;
-    visibility: visible;
-    transition: height 0.5s ease, visibility 0s ease 0s;
-}
-.experience, .ican, .ican-swift, .ican-c{
-    padding-left: 5px;
-    padding-top: 10px;
-    margin-bottom: 5px;
-    font-family: 'Space Grotesk', sans-serif;
-}
-.ican{
-    margin-top: 50px;
-}
-.ican-swift{
-    margin-top: 50px;
-}
-.ican-c{
-    margin-top: 65px;
-}
 
 .design{
     background-color: #0a0a0f;
@@ -340,34 +247,8 @@ body{
         height: 100%;
     }
     .techside{
-        height: max-content;
         padding-left: 20px;
         padding-right: 20px;
-    }
-    .techskillcontainer {
-        flex-direction: column !important;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-top: 50px;
-        margin-bottom: 30px;
-        gap: 0px;
-    }
-    .card-pair {
-        width: 90%;
-        margin-bottom: 15px;
-    }
-    .main-card,.sub-card {
-        width: 100%;
-        position: relative;
-    }
-    .sub-card{
-        transform: none;
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        font-size: 20px !important;
     }
     
     .sect-title {
@@ -383,13 +264,6 @@ body{
         font-size: 16px;
         padding: 10px;
     }
-    .main-card:hover~.sub-card {
-        visibility: visible;
-        transition: height 0.5s ease, visibility 0s ease 0s;
-    }
-    .skill-name {
-        font-size: 16px;
-    }
 
     .title-bar {
         flex-direction: column;
@@ -399,9 +273,6 @@ body{
         border-radius: 20px;
         text-align: center;
         margin-top: 10px;
-    }
-    .ican, .ican-c, .ican-swift{
-        margin-top: 0px;
     }
 }
 .talent-container{
@@ -421,7 +292,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 3px 1px #fff9;
+    box-shadow: 0px 0px 3px 1px var(--light_mainup);
     transition: background-color 0.5s ease;
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
@@ -483,5 +354,46 @@ body{
     }
     .talent{
         height: 400px;
+    }
+}
+.tinkerer {
+    background-color: #fff;
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 70vh;
+}
+.cardsx{
+    width: 30%;
+    height: 90%;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    flex: 1;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cardsx:hover{
+    transform: scale(1.1);
+}
+.contain{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 70%;
+    /* border-color: blue;
+    border-style: solid;
+    border-width: 1px; */
+    margin-top: 30px;
+    margin-left: 30px;
+    align-items: center;
+    gap: 30px;
+}
+@media (max-width: 500px){
+    .contain{
+        flex-direction: column;
+        width: 90%;
+    }
+    .cardsx{
+        width: 100%;
     }
 }
