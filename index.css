@@ -442,7 +442,6 @@ body{
 }
 .hackintosh, .linux{
     width: 48%;
-    border: 1px solid blue;
     border-radius: 20px;
     transition: transform 0.5s cubic-bezier(1, 0.04, 0, 1.02);
 }
@@ -450,7 +449,10 @@ body{
     transform: scale(0.9);
 }
 .hackintosh{
-    background-color: #aaaaaa4d;
+    background: linear-gradient(160deg, #1a2a6c, #b21f1f, #fdbb2d);;
+}
+.linux{
+    border: 1px solid blue;
 }
 .menubar{
     width: 100%;
@@ -458,18 +460,73 @@ body{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     display: flex;
-    background: rgba(57, 57, 57, 0.24);
+    background: rgba(57, 57, 57, 0.5);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     align-items: center;
     padding-left: 10px;
     gap: 15px;
+    color: white;
 }
 .menubar-items{
     font-family: "SF Display", system-ui;
     font-size: 14px;
 }
-
+.window{
+    width: 80%;
+    height: 60%;
+    background-color: ;
+    margin-top: 10%;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: 1px solid #aaa5;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+}
+.window-title{
+    width: 100%;
+    background-color: #444d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    padding-left: 5px;
+}
+.trafficlight{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    font-family: "SF Display", system-ui, -apple-system;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+.traffic-light-container{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding-left: 5px;
+}
+.traffic-light-child{
+    opacity: 0;
+}
+.traffic-light-container:hover .traffic-light-child {
+    opacity: 1;
+}
+.title-name{
+    font-family: "SF Display", system-ui, -apple-system;
+    font-size: 12px;
+    color: #aaa;
+    width: 80%;
+    text-align: center;
+}
 @media (max-width: 500px){
     .tinkering-cont{
         flex-direction: column;
