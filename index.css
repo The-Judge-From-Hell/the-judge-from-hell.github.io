@@ -446,7 +446,7 @@ body{
     transition: transform 0.5s cubic-bezier(1, 0.04, 0, 1.02);
 }
 .hackintosh:hover, .linux:hover{
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 .hackintosh{
     background: linear-gradient(160deg, #1a2a6c, #b21f1f, #fdbb2d);;
@@ -472,10 +472,13 @@ body{
     font-family: "SF Display", system-ui;
     font-size: 14px;
 }
+.menubar-items:hover{
+    background-color: rgba(100, 100, 100, 0.6);
+}
 .window{
     width: 80%;
     height: 60%;
-    background-color: ;
+    background-color: #111a;
     margin-top: 10%;
     margin-left: 10%;
     border-radius: 10px;
@@ -527,6 +530,26 @@ body{
     width: 80%;
     text-align: center;
 }
+.window-object-holder{
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 10px;
+}
+.object{
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+    background: rgba(100, 100, 100, 0.4);
+}
+.object:hover{
+    background-color: rgba(0,0,0,0.6);
+    border: 1px #aaa5 solid;
+    transition: background-color 0.1s cubic-bezier(1, 0.04, 0, 1.02);
+}
 @media (max-width: 500px){
     .tinkering-cont{
         flex-direction: column;
@@ -536,4 +559,15 @@ body{
         height: 100%;
         overflow: hidden;
     }
+}
+.bootloader, .bootloader-version{
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.bootloader-version{
+    text-align: center;
+    font-size: 30px;
 }
