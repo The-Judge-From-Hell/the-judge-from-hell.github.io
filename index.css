@@ -495,6 +495,7 @@ body{
     border: 1px solid #aaa5;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.08), 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 .window-title, .window-title-2{
     width: 100%;
@@ -624,6 +625,11 @@ body{
     border: 1px #aaa5 solid;
     transition: background-color 0.1s cubic-bezier(1, 0.04, 0, 1.02);
 }
+.displayshit{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
 @media (max-width: 500px){
     .linux{
         width: 100%;
@@ -632,5 +638,24 @@ body{
     .tinkerer{
         height: max-content;
         padding-bottom: 30px;
+    }
+    .window-object-holder{
+        display: flex;
+        flex-direction: column;
+    }
+    .window{
+        margin-bottom: 10px;
+    }
+    .displayshit {
+        display: block;
+        height: 100%;
+    }
+    .boxes, .distros{
+        width: 100%;
+    }
+    .distros{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 95%;
     }
 }
