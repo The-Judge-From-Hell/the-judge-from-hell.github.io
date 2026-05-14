@@ -379,7 +379,7 @@ body{
     flex: 1;
     position: relative;
     overflow: hidden;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform, 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .cardsx::before {
@@ -496,6 +496,14 @@ body{
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.08), 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+.window::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    z-index: -1;
 }
 .window-title, .window-title-2{
     width: 100%;
