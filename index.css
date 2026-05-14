@@ -389,6 +389,7 @@ body{
 
 .cardsx:hover {
     transform: scale(1.1);
+    background: linear-gradient(145deg, #ddd0f5, #c4a8e8, #ede8fa);
 }
 .contain{
     display: flex;
@@ -567,8 +568,7 @@ body{
         flex-direction: column;
     }
     .hackintosh{
-        width: 90%;
-        height: 100%;
+        width: 100%;
         overflow: hidden;
     }
 }
@@ -618,4 +618,13 @@ body{
     background-color: rgba(0, 0, 0, 0.6);
     border: 1px #aaa5 solid;
     transition: background-color 0.1s cubic-bezier(1, 0.04, 0, 1.02);
+}
+@media (max-width: 500px){
+    .linux{
+        width: 100%;
+    }
+    .tinkerer{
+        height: max-content;
+        padding-bottom: 30px;
+    }
 }
