@@ -569,6 +569,7 @@ body{
     grid-template-rows: 1fr 1fr;
     gap: 10px;
     padding: 10px 10px;
+    overflow: auto;
 }
 .object{
     /* border: 1px solid blue; */
@@ -613,6 +614,7 @@ body{
     gap: 10px;
     padding: 10px 10px;
     margin-right: 0px;
+    overflow: scroll;
 }
 .boxes{
     height: 90%;
