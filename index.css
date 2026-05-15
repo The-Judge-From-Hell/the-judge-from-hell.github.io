@@ -451,7 +451,7 @@ body{
     justify-content: center;
 }
 .hackintosh, .linux{
-    width: 48%;
+    width: auto;
     border-radius: 20px;
     transition: transform 0.5s cubic-bezier(1, 0.04, 0, 1.02);
 }
@@ -489,7 +489,7 @@ body{
     background-color: rgba(100, 100, 100, 0.6);
 }
 .window{
-    width: 80%;
+    width: auto;
     height: auto;
     background-color: #111a;
     margin-top: 10%;
