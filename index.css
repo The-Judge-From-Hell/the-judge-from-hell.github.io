@@ -882,6 +882,7 @@ background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
 .window-object-holder li,
 .window-object-holder-2 li {
     white-space: nowrap;
+    overflow: hidden;
 }
 .window-object-holder {
     grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr);
@@ -889,6 +890,7 @@ background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
 .boxes {
     width: 45%;
     min-width: 200px;
+    overflow: hidden;
 }
 
 .distros {
