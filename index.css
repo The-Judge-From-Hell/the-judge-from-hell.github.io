@@ -881,7 +881,7 @@ background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
 }
 .bootloader li {
     white-space: nowrap;
-    overflow: hidden;
+    overflow: scroll;
 }
 .object-2 li{
     overflow:scroll;
