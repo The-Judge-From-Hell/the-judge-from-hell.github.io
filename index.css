@@ -883,6 +883,9 @@ background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
     white-space: nowrap;
     overflow: hidden;
 }
+.object-2 li{
+    overflow: hidden;
+}
 .window-object-holder {
     grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr);
 }
