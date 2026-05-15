@@ -117,12 +117,12 @@ body{
 .primary{
     background-color: #0a0a0f;
     padding-top: 20px;
-    padding-bottom: 20px;
     height: 500px;
 }
 .techside{
-    margin-top: 15px;
+    padding-top: 15px;
     height: 400px;
+    background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
 }
 .sect-title, .sect-title-light{
     font-family: 'Space Grotesk', sans-serif;
@@ -130,6 +130,7 @@ body{
 }
 .sect-title{
     color: var(--main);
+    background-color: #00000000;
 }
 .sect-title-light{
     color: var(--light_main);
@@ -148,9 +149,10 @@ body{
     justify-content: left;
     gap: 15px;
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
+    animation: fadeIn 0.8s ease forwards;
     animation-delay: 1.5s;
     padding-right: 20px;
+    height: 100%;
 }
 .card {
     flex-shrink: 0;
@@ -160,15 +162,16 @@ body{
     perspective: 1000px;
     /* 3D perspective */
     margin: 10px;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
 }
 .card-toggle { display: none; }
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
     transform-style: preserve-3d;
+    transform: scale(0.8);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -201,9 +204,9 @@ body{
     border-color: var(--main);
     border-width: 1px;
     font-family: 'Space Grotesk', sans-serif;
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
+    background: linear-gradient(145deg, #0d0d1a, #1a0a2e, #0a0a0f);
 }
 .flip-card-inner{
     backface-visibility: hidden;
@@ -260,7 +263,7 @@ body{
         padding-left: 20px;
         padding-right: 20px;
         height: max-content;
-        margin-bottom: 30px;
+        padding-bottom: 30px;
     }
     
     .sect-title {
@@ -303,9 +306,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: scale(0.98);
     align-items: center;
     box-shadow: 0px 0px 3px 1px var(--light_mainup);
-    transition: background-color 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease;
     background: linear-gradient(145deg, #0d0d1a, #1a0a2e, #0a0a0f);
     cursor: pointer;
     padding-bottom: 20px;
@@ -339,12 +343,8 @@ body{
     height: 300px;
     padding-right: 10px;
 }
-/* On hover: card opaque + content visible */
 .talent:hover {
-    background-color: rgba(255, 255, 255, 1) !important;
-    /* fully opaque */
     transform: scale(1.05);
-    transition: transform 0.5s ease, background-color 0.5s ease;
 }
 .talent:hover .brush,
 .talent:hover .soft-name,
@@ -375,7 +375,10 @@ body{
     width: 30%;
     height: 90%;
     border-radius: 20px;
-    border: 1px solid #aaa;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 24px rgba(124, 58, 237, 0.08);
     flex: 1;
     position: relative;
     overflow: hidden;
@@ -394,7 +397,7 @@ body{
 
 .cardsx:hover {
     transform: scale(1.1);
-    background: linear-gradient(145deg, #ddd0f5, #c4a8e8, #ede8fa);
+    background: linear-gradient(145deg, #ddd0f5, #c4a8e8, #bcabe8);
 }
 .contain{
     display: flex;
@@ -418,7 +421,7 @@ body{
 }
 .skill-set{
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 25px;
     margin-top: 20px;
     margin-right: 10px;
@@ -434,7 +437,7 @@ body{
     }
 }
 .tinkerer {
-    background-color: #fff;
+    background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
     padding-left: 30px;
     padding-top: 30px;
     height: 90vh;
@@ -671,7 +674,7 @@ body{
     background: linear-gradient(145deg, #0f0a1a, #1a0a2e, #2a0a3e);
     padding-left: 30px;
     padding-top: 30px;
-    height: 100vh;
+    height: 80vh;
 }
 
 .project-container {
@@ -707,7 +710,7 @@ body{
 .tab-label:hover{
     border: 1px solid var(--main);
     border-bottom: none;
-    background-color: #1a2a6c;
+    background: linear-gradient(145deg, #0d0d1a, #1a0a2e, #0a0a0f);
     color: #fff;
 }
 
@@ -719,7 +722,7 @@ body{
 #t5:checked~.tab-labels label[for="t5"] {
     background: #1e1e2e;
     color: #bb7ff3;
-    border-color: #7c3aed;
+    border-color: linear-gradient(145deg, #0d0d1a, #1a0a2e, #0a0a0f);;
 }
 
 /* content panels */
@@ -752,7 +755,7 @@ body{
     text-align: center;
 }
 .project-desc{
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -785,6 +788,7 @@ body{
     .project-side {
         padding-left: 10px;
         padding-right: 10px;
+        height: 110vh;
     }
 
     .tab-labels::-webkit-scrollbar {
@@ -813,5 +817,62 @@ body{
     }
     .project-title-cont{
         flex-direction: column;
+        gap: 15px;
+    }
+}
+.contact-side{
+    height: 70vh;
+    padding: 30px 30px;
+background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
+}
+.contact-cont{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    height: 70%;
+}
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border-radius: 20px;
+    transition: transform 0.2s ease-out;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 24px rgba(124, 58, 237, 0.08);
+}
+.contact-card:hover{
+    transform: scale(1.1);
+}
+.contact-type{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+.contact-info{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+.contact-logo{
+    margin-top: auto;
+}
+@media (max-width: 500px){
+    .contact-side{
+        height: max-content;
+    }
+    .contact-cont{
+        flex-direction: column;
+        height: max-content;
+    }
+    .contact-card{
+        width: 100%;
     }
 }
