@@ -440,18 +440,19 @@ body{
     background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
     padding-left: 30px;
     padding-top: 30px;
-    height: auto;
+    height: 100vh;
 }
 .tinkering-cont{
     display: flex;
     margin-top: 30px;
     margin-right: 30px;
-    height: auto;
+    height: max-content;
     gap: 25px;
     justify-content: center;
 }
 .hackintosh, .linux{
     width: auto;
+    height: max-content;
     border-radius: 20px;
     transition: transform 0.5s cubic-bezier(1, 0.04, 0, 1.02);
 }
