@@ -879,8 +879,7 @@ background: linear-gradient(145deg, #f0f0ff 0%, #e4d8f7 50%, #d9d9f0 100%);
         width: 100%;
     }
 }
-.window-object-holder li,
-.window-object-holder-2 li {
+.bootloader li {
     white-space: nowrap;
     overflow: hidden;
 }
