@@ -19,4 +19,4 @@ Nickname `The Judge From Hell` — courtesy of Google Play at age 7.
 - `KDrama Recommender` - my personal kdrama manager to track my likes.
 
 ## Status
-Work in progress.
+Completed. Open for Bugs and PRs if interested.
